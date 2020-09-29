@@ -14,7 +14,7 @@ const images = [
    {id: 10, src: './img/10.jpg'}
 ]
 
-const _createModal = (options) =>{
+const _createModal = () =>{
    const div = document.createElement('div');
    div.classList.add('modal')
    div.insertAdjacentHTML( 'afterbegin',`
@@ -31,7 +31,7 @@ const _createModal = (options) =>{
    return div
 }
 
-$.modal = function() {
+$.modal = () => {
    const $modal = _createModal();
    const customModal = $modal.querySelector(".modal_body");
    const getIdTempImg = () =>{
