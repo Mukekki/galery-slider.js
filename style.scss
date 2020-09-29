@@ -1,0 +1,197 @@
+
+aside {
+   display: block;
+ }
+ html,
+ body {
+   font-family: 'Oswald', sans-serif;
+   height: 100%;
+   width: 100%;
+   font-size: 100%;
+   line-height: 1;
+   font-size: 14px;
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+   margin: 0;
+ }
+ input,
+ button,
+ textarea {
+   font-family: inherit;
+ }
+ input::-ms-clear {
+   display: none;
+ }
+ button {
+   cursor: pointer;
+ }
+ button::-moz-focus-inner {
+   padding: 0;
+   border: 0;
+ }
+ a,
+ a:visited {
+   text-decoration: none;
+ }
+ a:hover {
+   text-decoration: none;
+ }
+ ul li {
+   list-style: none;
+ }
+ img {
+   vertical-align: top;
+ }
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+   font-size: inherit;
+   font-weight: 400;
+ }
+ 
+ .header_overlay {
+   position: fixed;
+   width: 100%;
+   top: 0px;
+   background-color: rgba($color: #000000, $alpha: 1)
+ }
+
+ .head_body {
+    font-size: 22px;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 0 auto;
+ }
+
+ .head_menu {
+    
+    display: flex;
+    justify-content: space-between;
+    div {
+      margin-left: 10px;
+      color: #ffffff;
+    }
+ }
+
+.logo {
+   color: #ffffff;
+   span{
+      color: red ;
+   }
+}
+.body_content {
+   height: 100%;
+   max-width: 1024px;
+   background-color: rgba($color: #000000, $alpha: .5);
+   margin: 0 auto;
+}
+.slider {
+   width: 100%;
+   height: max-content;
+   background-color: #aaa;
+}
+.overlay{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba($color: #000000, $alpha: .7);
+  z-index: -1;
+  opacity: 0;
+  transition: all .3s ease-in;
+}
+
+  .modal_body{
+    transform: translateY(-300px);
+    z-index: -1;
+    opacity: 0;
+    transition: all .3s ease-in;
+    position: relative;
+    margin: 100px auto;
+    width: 75%;
+    img {
+      width: 100%;
+      display: block;
+    }  
+  }
+  .button_overlay_back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    transition: all 0.3s ease-in;
+     &:hover{
+       background: rgba($color: #000000, $alpha: 0.5)
+     }
+    }
+  .button_overlay_next{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100%;
+    transition: all 0.3s ease-in;
+    &:hover{
+      background: rgba($color: #000000, $alpha: 0.4);
+      transition: background 0.3s;
+    }
+  }
+
+// modal open
+
+  .modal.open .overlay {
+    z-index: 1000;
+    opacity: 1;
+    transition: all .3s ease-in;
+  }
+  .modal.open .modal_body {
+    box-shadow: 1px 1px 20px 1px #000;
+    transform: translateY(0px);
+    z-index: 1000;
+    opacity: 1;
+  }
+
+// modal close 
+.modal.close .overlay {
+  z-index: -1;
+  opacity: 0;
+  transition: all .3s ease-in;
+}
+.modal.close .modal_body {
+  transform: translateY(-300px);
+  z-index: -1;
+  opacity: 0;
+}
+
+
+// img content
+.img_content {
+  padding: 10px;
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  img{
+    width: 100%;
+
+  }
+}
+.imgContainer{
+  max-width: 300px;
+  padding: 5px;
+  margin: auto;
+  transition: all 0.3s ease;
+    &:hover {
+      background-color: rgba($color: #000000, $alpha: .5);
+    }
+    img {
+      max-height: 100%;
+    }
+}
