@@ -67,27 +67,25 @@ $.modal = () => {
          const tmp = +getIdTempImg() + 1
          if (tmp === images.length){
             modal.close()
-            return {} // тупо заглушку въебал шоб консоль не материлась
          }
-         else 
+         else {
             removeTempImg()
             customModal.insertAdjacentHTML("afterbegin",`
          <img src="${images[tmp].src}" alt="#" class="tempimg" id="${images[tmp].id}">
          `
-         )
+         )}
       },
       back(){
          const tmp = +getIdTempImg() - 1
          if (tmp < 0){
             modal.close()
-            return {} // тоже заглушка
          }
-         else 
+         else {
             removeTempImg()
             customModal.insertAdjacentHTML("afterbegin",`
          <img src="${images[tmp].src}" alt="#" class="tempimg" id="${images[tmp].id}">
          `
-         )
+         )}
       }
    }
    
@@ -96,7 +94,7 @@ $.modal = () => {
          modal.back()
       }
       });
-   const NextButton = customModal.addEventListener('click', event => {
+   const nextButton = customModal.addEventListener('click', event => {
       if (event.target.dataset.next){
          modal.next()
       }
