@@ -161,6 +161,7 @@ h6 {
   -webkit-transition: all 0.3s ease-in;
   -o-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
+  cursor: pointer;
 }
 
 .button_overlay_back:hover {
@@ -176,6 +177,7 @@ h6 {
   -webkit-transition: all 0.3s ease-in;
   -o-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
+  cursor: pointer;
 }
 
 .button_overlay_next:hover {
@@ -230,6 +232,7 @@ h6 {
 
 .img_content img {
   width: 100%;
+  cursor: pointer;
 }
 
 .imgContainer {
